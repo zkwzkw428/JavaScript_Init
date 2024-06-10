@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 定义一个数组
+    let arr = []
+    // 定义一个函数
+    let chars = prompt('请输入想统计的所有字符组合')
+    const obj = {}
+    function getTotal(chars){
+        // 转换为数组
+        arr = chars.split('')
+        // console.log(arr);
+        // 定义字符个数
+        // 去重
+        // let newarr = []
+        // for(let i = 0; i < arr.length; i++){
+        //     if(newarr.indexOf(arr[i]) == -1){
+        //         newarr.push(arr[i])
+        //     }else{
+        //         continue
+        //     }
+        // }
+        arr.forEach(function(item){
+            let i = 0
+            arr.forEach(function(count){
+                if(count == item){
+                    i++
+                }
+            })
+            return obj[item] = i
+        })
+        console.log(obj);
+    }
+    getTotal(chars)
+    </script>
+</body>
+</html>

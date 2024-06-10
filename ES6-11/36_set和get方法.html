@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // get和set
+        class Phone{
+            constructor(brand,price){
+                this.brand = brand
+                this.price = price   
+            }
+            get price(){
+                console.log('价格被获取了');
+                // return 'free'
+                // console.log(this. constructor.price);
+            }
+            // set初始化（检测的属性存在）也会执行,不管改没有改
+            set price(newValue){
+                console.log('价格被更改了');
+                // this.price = newValue
+            }
+            // static price = 9999
+        }
+        let s = new Phone('小米',1299)
+        // console.log(s.price);
+        // 只要get没有返回值，读取price的值都为undefined
+        // console.log(s);  
+    </script>
+</body>
+</html>

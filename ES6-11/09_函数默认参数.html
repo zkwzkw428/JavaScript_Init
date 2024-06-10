@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.es6允许给函数参数赋予默认值，如果有参数就用，没有就用默认的
+        function demo(a,b,c=10) {
+            console.log(a + b + c);
+        }
+        demo(1, 2, 3)
+        // 2.利用解构赋值传递参数
+        function test({name,age}){
+            // console.log(options.name);
+            // console.log(options.age);
+            console.log(name);
+            console.log(age);
+        }
+        let person = {
+            name:'hx',
+            age:19
+        }
+        test(person)
+    </script>
+</body>
+</html>

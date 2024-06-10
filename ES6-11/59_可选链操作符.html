@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ?.
+        function main(config){
+            // 判断是否传入对象，并判断是否有对应属性
+            // const dbHost = config && config.db && config.db.host
+            // 可选链操作符
+            // 不会报错undefined
+            const dbHost = config?.db?.host
+            console.log(dbHost);
+            // console.log(config.db.host);
+        }
+        const obj = {
+            db:{
+                host:'127.0.0.1',
+                port:'3306'
+            },
+            cache:{
+                host:'192.168.2.12',
+                port:'3301'
+            }
+        }
+        main(obj)
+    </script>
+</body>
+</html>

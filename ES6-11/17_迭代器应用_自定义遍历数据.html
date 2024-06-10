@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const grade = {
+            name:'终极一班',
+            stus:[
+                'xiaoming',
+                'xiaoning',
+                'xiaotian',
+                'knight'
+            ],
+            [Symbol.iterator]:function(){
+                // 索引变量
+                let index = 0;
+                return {
+                    next:()=> {
+                        if(index < grade.stus.length){
+                            return {value:this.stus[i],done:false}
+                            index++
+                        }else{
+                            return {value:undefined,done:true}
+                        }
+                    }
+                }
+            }
+        }
+        // for of遍历对象
+        for(let k of grade){
+            console.log(k);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        let el_div = document.querySelector('div')
+        el_div.addEventListener('click',function(){
+            // 保持事件源
+            // let _this = this
+            // setTimeout(function(){
+            //     _this.style.background = 'purple'
+            // },2000)
+            setTimeout(()=>{
+                console.log(this);
+                this.style.background = 'purple'
+            },2000)
+        })
+        // 数组中返回偶数的元素
+        const arr = [1,3,6,10,20,100]
+        const result = arr.filter(item => item % 2 === 0)
+        console.log(result);
+
+        // 箭头函数适用于与this无关的回调，定时器，数组方法的回调
+        // 箭头函数不适用于与this有关的回调，事件回调，对象的方法
+    </script>
+</body>
+</html>

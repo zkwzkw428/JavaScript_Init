@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <script>
+        // 一次性定义多个变量并赋值
+        let a;
+        let b,c='x',d=[]
+        // 1.let不支持重复定义变量
+        // let star = '罗志祥'
+        // let star = '小猪'
+
+        // 2.块级作用域，全局，函数，eval
+        {
+            let girl = '周扬青'
+        }
+        // console.log(girl);
+
+        // 3.不存在变量提升
+        console.log(name);
+        // let name = '尚硅谷'
+
+        // 4.不影响作用域链
+        {
+            let school = '尚硅谷'
+            function fn(){
+                // 往上一级作用域查找
+                console.log(school);
+            }
+        }
+    </script>
+</body>
+</html>

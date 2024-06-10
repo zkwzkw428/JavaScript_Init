@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建一个手机对象
+        function Phone(name,price){
+            this.name = name
+            this.price = price
+        }
+         // 添加方法,往原型添加，那么实例也有该方法
+         Phone.prototype.callPhone = function(){
+            console.log('我可以打电话!');
+        }
+        let huawei = new Phone('华为',5399)
+        huawei.callPhone()
+        console.log(huawei);
+
+        // class
+        class Phone{
+            // 构造方法 名字不能修改
+            constructor(name,price){
+                this.name = name
+                this.price = price
+            }
+            // 只能简写
+            call(){
+                console.log('我可以打电话');
+            }
+        }
+        let onePlus = new Phone('一加',3499)
+        onePlus.call()
+        console.log(onePlus);
+    </script>
+</body>
+</html>

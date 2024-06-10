@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 手机
+        function Phone(brand,price){
+            this.brand = brand
+            this.price = price
+        }
+        let phone = new Phone('手机','价格')
+        // 子类构造函数
+        function SmartPhone(brand,price,color,size){
+            Phone.call(this,brand,price)
+            this.color = color
+            this.size = size
+        }
+        // 将子类的原型指向父类构造函数的实例对象
+        SmartPhone.prototype = new Phone
+        // 将子类原型当中的构造器指向子类
+        SmartPhone.prototype.constructor = SmartPhone
+        let xiaomi = new SmartPhone('小米','2399','黑色','6英寸')
+        console.log(xiaomi);
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="">美丽心灵</a>
+            <p>1993</p>
+        </li>
+        <li>
+            <a href="">阿甘正传</a>
+            <p>1990</p>
+        </li>
+    </ul>
+    <script>
+        let str = `
+        <ul>
+            <li>
+                <a href="">美丽心灵</a>
+                <p>1993</p>
+            </li>
+            <li>
+                <a href="">阿甘正传</a>
+                <p>1990</p>
+            </li>
+        </ul>
+        `
+        const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg
+        // 调用方法
+        const result = str.matchAll(reg)
+        // console.log(result);
+        // for(let v of result){
+        //     console.log(v);
+        // }
+        // console.log(result);
+        const arr = [...result]
+        console.log(arr);
+    </script>
+</body>
+</html>

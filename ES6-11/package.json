@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "jquery": "^3.7.1"
+  },
+  "name": "es6-11",
+  "version": "1.0.0",
+  "main": "23_promise读取文件内容.js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "browserify": "^17.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

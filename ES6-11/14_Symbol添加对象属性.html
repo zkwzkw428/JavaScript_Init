@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol 添加属性</title>
+</head>
+<body>
+    <script>
+        let game = {
+            name:'尚硅谷',
+        }
+        let methods = {
+            up:Symbol(),
+            down:Symbol()
+        }
+        // 往game当中追加方法
+        game[methods.up] = function(){
+            console.log('我可以跳起');
+        }
+        game[methods.down] = function(){
+            console.log('我可以下降');
+        }
+        let youxi = {
+            name:'狼人杀',
+            [Symbol('saty')]:function(){
+                console.log('我可以发言');
+            },
+            [Symbol('boom')]:function(){
+                console.log('我可以自爆');
+            }
+        }
+    </script>
+</body>
+</html>

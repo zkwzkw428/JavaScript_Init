@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // includes indexOf
+        const games = ['王者荣耀','原神','火影忍者']
+        // 判断
+        console.log(games.includes('王者荣耀'));
+        console.log(games.includes('穿越火线'));
+        // **
+        console.log(2 ** 10);
+        console.log(Math.pow(2, 10));
+        function sayHello(){
+            console.log('你好');
+        }
+        function test(callback){
+            // 同步
+            // callback()
+            // 异步
+            setTimeout(()=>{callback()},2000)
+        }
+        test(sayHello)
+        console.log('你也好');
+    </script>
+</body>
+</html>

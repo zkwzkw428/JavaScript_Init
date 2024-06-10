@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建symbol
+        let s = Symbol()
+        let s1 = Symbol('尚硅谷')
+        let s2 = Symbol('尚硅谷')
+        console.log(s1 === s2); // false
+        let s3 = Symbol.for('尚硅谷')
+        let s4 = Symbol.for('尚硅谷')
+        console.log(s3 === s4); // true
+    </script>
+</body>
+</html> 

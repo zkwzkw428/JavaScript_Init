@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  es6允许按照一定的模式从数组和对象当中取值，对变量进行赋值
+        // 这被被称为解构赋值
+        // 1.数组的解构
+        // const F4 = ['小沈阳','刘能','赵四','宋小宝']
+        // let [xiao, liu, zhao, song] = F4
+        // console.log(xiao);
+        // console.log(liu);
+        // console.log(zhao);
+        // console.log(song);
+
+        // 2.对象的解构赋值
+        const zhao = {
+            name:'赵本山',
+            age:'不详',
+            xiaopin:function(){
+                console.log('我会表演小品');
+            }
+        }
+        // let {name, age, xiaopin} = zhao
+        // console.log(name);
+        // console.log(age);
+        // console.log(xiaopin);
+        
+        let {xiaopin} = zhao
+        // 解构之后，该方法当中的this不一样，解构之后指向window，解构之前指向zhao对象
+        xiaopin()
+    </script>
+</body>
+</html>

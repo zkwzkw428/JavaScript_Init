@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        // 1.数组的合并
+        const colorWord = ['红色','绿色']
+        const color = ['red','green']
+        const result = [...colorWord, ...color]
+        console.log(result);
+
+        // 2.数组的克隆(浅拷贝)
+        const sanzihua = ['E','G','M']
+        const sanyecao = [...sanzihua]
+        console.log(sanyecao);
+
+        // 3.将伪数组转为真实数组
+        const divs = document.querySelectorAll('div')
+        const divArr = [...divs]
+        console.log(divArr);
+    </script>
+</body>
+</html>

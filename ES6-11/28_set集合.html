@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 声明一个let
+        let s = new Set()
+        let chars = new Set(['i','love','you'])
+
+        // 元素个数
+        console.log(chars.size);
+        // 添加新的元素
+        chars.add('lyq')
+        // 删除元素
+        chars.delete('lyq')
+        // 检测
+        console.log(chars.has('lyq'))
+        // 清空
+        // chars.clear()
+        console.log(chars);
+
+        // 遍历chars
+        for(let char of chars){
+            console.log(char);
+        }
+    </script>
+</body>
+</html>

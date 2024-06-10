@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 定义两个promise对象
+        // allSettled()一个promise对象的数组，返回的值也是promise对象，该对象状态一定是成功的
+        // 返回promise对象的值为数组
+        const p1 = new Promise((resolve,reject) => {
+            // 模拟异步任务
+            setTimeout(function(){
+                // console.log('商品数据-1');
+                resolve('商品数据-1')
+            },2000)
+        })
+        const p2 = new Promise((resolve,reject) => {
+            // 模拟异步任务
+            setTimeout(function(){
+                reject('失败数据')
+                // resolve('商品数据-2')
+            },2000)
+        })
+        // 调用该方法
+        const p = Promise.allSettled([p1, p2])
+        console.log(p);
+        // all方法参数当中只要有一个promise对象的状态为失败，那么返回的结果也是失败的promised对象，值为失败promise的值
+        const res = Promise.all([p1, p2])
+        console.log(res);
+    </script>
+</body>
+</html>

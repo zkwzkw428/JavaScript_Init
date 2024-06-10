@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const school = {
+            name:'尚硅谷',
+            address:'北京',
+            fee:19999
+        }
+         // 获取对象所有的key
+        console.log(Object.keys(school));
+        // 获取对象所有的值
+        console.log(Object.values(school));
+        // entries
+        console.log(Object.entries(school));
+        // 创建Map
+        console.log(new Map(Object.entries(school)));
+        // 对象属性的描述对象
+        const obj = Object.create(null,{
+            name:{
+                // 设置值
+                value:'尚硅谷',
+                // 属性特性
+                writable:true,
+                configurable:true,
+                enumerable:true
+            }
+        }
+        )
+    </script>
+</body>
+</html>

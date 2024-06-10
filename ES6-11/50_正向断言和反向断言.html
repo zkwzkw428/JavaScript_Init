@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 声明字符串
+        let str = 'JS2014324你知道莫555啦啦噜'
+        // 正向断言
+        const reg = /\d+(?=啦)/
+        const result = reg.exec(str)
+        console.log(result);
+
+        // 反向断言
+        const reg1= /(?<=莫)\d+/
+        const result1 = reg1.exec(str)
+        console.log(result);
+    </script>
+</body>
+</html>

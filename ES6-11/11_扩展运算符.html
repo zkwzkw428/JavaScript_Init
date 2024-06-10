@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // [...] 扩展运算符能将数组转换为逗号分隔的参数序列
+        function demo(){
+            console.log(arguments);
+        }
+        let arr = ['红色','白色','蓝色']
+        demo(demo) // 参数只有一个就是数组
+        demo(...demo) // 参数变成三个,将数组的元素变成参数序列
+    </script>
+</body>
+</html>

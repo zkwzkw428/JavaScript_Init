@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="">王者荣耀</a>
+            <p>腾讯出版</p>
+        </li>
+        <li>
+            <a href="">原神</a>
+            <p>米哈游出版</p>
+        </li>
+    </ul>
+    <script>
+        // dot .元字符 除换行符以外的任意字符
+        let str = `
+            <ul>
+            <li>
+                <a href="">王者荣耀</a>
+                <p>腾讯出版</p>
+            </li>
+            <li>
+                <a href="">原神</a>
+                <p>米哈游出版</p>
+            </li>
+        </ul>
+        `
+        // 声明正则
+        const reg = /<li>\s+<a>(.*?)<\/a>\s+<p>(.*?)<\/P>/
+        // 执行匹配
+        const result = reg.exec(str)
+        console.log(result);
+        // dotAll模式
+        const reg1 = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs
+        const result1 = reg1.exec(str)
+        console.log(result1);
+    </script>
+</body>
+</html>

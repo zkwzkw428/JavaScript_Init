@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 构造函数是函数也是对象
+        // function Phone(){
+
+        // }
+        // Phone.name = '手机'
+        // Phone.change = function(){
+        //     console.log('我可以改变这个世界');
+        // }
+        // Phone.prototype.size =  '5.5英寸'
+        // let nokia = new Phone()
+        // console.log(nokia.name);// undefined
+        // nokia.change()// not a function
+        // console.log(nokia.size);
+
+        class Phone{
+            // 静态属性
+            static name = '手机'
+            static change(){
+                console.log('我可以简写');
+            }
+        }
+        let nokia = new Phone()
+        console.log(nokia.name);
+        nokia.change()
+    </script>
+</body>
+</html>
